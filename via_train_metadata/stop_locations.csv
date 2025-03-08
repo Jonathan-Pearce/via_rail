@@ -1,0 +1,343 @@
+station,code
+Vancouver,VCVR
+Mission Harbour,MSNH
+Agassiz,AGAS
+Katz,KATZ
+North Bend,NBND
+Ashcroft,ASHN
+Kamloops North,KAMN
+Clearwater,CLWT
+Blue River,BLUE
+Valemount,VLMT
+Jasper,JASP
+Hinton,HINT
+Edson,EDSN
+Evansburg,EVAN
+Edmonton,EDMO
+Viking,VKNG
+Wainwright,WAIN
+Unity,UNIT
+Biggar,BIGG
+Saskatoon,SASK
+Watrous,WATR
+Melville,MELV
+Rivers,RVRS
+Portage La Prairie,PLPX
+Winnipeg,WNPG
+Elma,ELMA
+Brereton Lake,BRTL
+Ophir,OPHR
+Winnitoba,WNTB
+Rice Lake,RCLK
+Copelands Landing,COPE
+Malachi,MLCH
+Ottermere,OTTM
+Minaki,MNKI
+Redditt,RDDT
+Farlane,FARL
+Canyon,CNYK
+Red Lake Road,RLRX
+Richan,RCHN
+Sioux Lookout,SLKT
+Savant Lake,SAVL
+Flindt Landing,FLTL
+Allanwater Bridge,ALWB
+Collins,COLL
+Armstrong,ARMG
+Mud River,MUDR
+Ferland,FERL
+Auden,AUDN
+Nakina,NAKI
+Longlac,LLAC
+Caramat,CARA
+Hillsport,HLSP
+Hornepayne,HNPN
+Oba,OBAX
+Elsas,ELSA
+Foleyet,FOLE
+Gogama,GOGA
+Westree,WSTR
+Ruel,RUEL
+Felix,FELX
+McKee's Camp,MCKC
+Laforest,LAFO
+Capreol,CAPR
+Sudbury (Jct.),SUDJ
+Parry Sound,PARS
+Washago,WSHG
+Toronto,TRTO
+South Parry,SPAR
+Churchill,CHUR
+Tidal,TIDL
+Chesnaye,CHES
+M'Clintock,MCLI
+O'Day,ODAY
+Herchmer,HERC
+Thibaudeau,THIB
+Weir River,WEIR
+Amery,AMRY
+Bird,BIRD
+Gillam,GILL
+Wivenhoe,WVHO
+Ilford,ILFO
+Pit Siding,PITS
+Bridgar,BRGR
+Pikwitonei,PIKW
+Sipiwesk,SIPI
+Thompson,THOM
+Leven,LEVN
+Thicket Portage,THKP
+Hockin,HOCK
+Odhill,ODHI
+Lyddal,LYDD
+Wabowden,WBDN
+Pipun,PIPN
+Ponton,PNTN
+Turnbull,TURN
+Wekusko,WEKU
+Dyce,DYCE
+Dering,DERI
+Cormorant,CORM
+Halcrow,HALC
+Orok,OROK
+The Pas,TPAS
+Hudson Bay,HBAY
+Reserve,RSRV
+Endeavour,ENDV
+Sturgis,STGS
+Canora,CANO
+Mikado,MIKA
+Veregin,VERE
+Kamsack,KAMS
+Togo,TOGO
+Montréal,MTRL
+St. Lambert,SLAM
+St. Hyacinthe,SHYA
+Drummondville,DRMV
+Ste-Foy,SFOY
+Québec,QBEC
+Ottawa,OTTW
+Casselman,CSLM
+Alexandria,ALEX
+Coteau,COTO
+Dorval,DORV
+Charny,CHNY
+Fallowfield,FALL
+Smiths Falls,SMTF
+Brockville,BRKV
+Kingston,KGON
+Napanee,NAPN
+Belleville,BLVL
+Trenton Jct.,TRNJ
+Cobourg,CBRG
+Oshawa,OSHA
+Guildwood,GUIL
+Gananoque,GANA
+Cornwall,CWLL
+Oakville,OAKV
+Aldershot,ALDR
+Brantford,BRTF
+Woodstock,WDST
+Ingersoll,INGR
+London,LNDN
+Glencoe,GLNC
+Chatham,CHAT
+Windsor,WDON
+Sarnia,SARN
+Wyoming,WYOM
+Strathroy,STRR
+St.Marys,SMYS
+Stratford,STRF
+Kitchener,KITC
+Guelph,GUEL
+Georgetown,GEOR
+Brampton,BRMP
+Malton,MALT
+Port Hope,PHOP
+Grimsby,GRIM
+St. Catharines,SCAT
+Niagara Falls,NIAG
+Sauvé,SAUV
+Anjou,ANJO
+Joliette,JOLI
+St-Justin,SJUS
+St-Paulin,SPAU
+Charette,CHRT
+Shawinigan,SHWN
+Grand-Mère,GMRE
+Garneau,GARN
+Saint-Tite,STIT
+Hervey,HERV
+La Tuque,LTUQ
+Fitzpatrick,FITZ
+Cressman,CRSM
+Club Vermillion,VMLC
+Rapide-Blanc,RAPB
+Lac-Darey,LDAR
+Duplessis,DUPL
+Mctavish,MCTC
+Windigo,WNDG
+Ferguson,FERG
+Club Wigwam,WGWC
+Vandry,VDRY
+Dessane,DESS
+Saint-Maurice Rivière-Boom,SMRB
+Weymont,WYMT
+Sanmaur,SANM
+Cann,CANN
+Club Belanger,BLGC
+Hibbard,HIBB
+Casey,CASY
+Mccarthy,MCCA
+Club Sisco,SSCC
+Manjobagues,MJBG
+Parent,PARE
+Timbrell,TIMB
+Club Rita Inc.,RTAC
+Strachan,STRN
+Club Maniwawa,MWWC
+Greening,GRNG
+Oskelaneo Lodge,OSKL
+Rivière Oskélanéo,OSKR
+Clova,CLOV
+Coquar,COQU
+Monet,MNET
+Consolidated Bathurst,CBAT
+Club Kapitachuan,KPTC
+Bourmont,BRMT
+Club Beaudin Inc.,BDNC
+Langlade,LNGL
+Da-Rou-Lac Lodge,DRLL
+Gagnon,GAGN
+Dix,DIXX
+Bolger,BGQU
+Forsythe,FORS
+Press,PRSS
+Signai,SIGN
+Mégiscane,MEGI
+Senneterre,SENN
+Halifax,HLFX
+Truro,TRUR
+Springhill Jct,SPRJ
+Amherst,AMHS
+Sackville,SACK
+Moncton,MCTN
+Rogersville,RGRV
+Miramichi,MIRA
+Bathurst,BTRS
+Petit Rocher,PROC
+Jacquet River,JACR
+Charlo,CHLO
+Campbellton,CBTN
+Matapedia,MTPD
+Causapscal,CAUS
+Amqui,AMQU
+Sayabec,SAYA
+Mont-Joli,MJLI
+Rimouski,RMSK
+Trois Pistoles,TPIS
+Rivière-Du-Loup,RDLX
+La Pocatière,LPOC
+Montmagny,MMGY
+Rousseau,ROUS
+Rivière-À-Pierre,RAPX
+Miquick,MIQK
+Club Jacques-Cartier,JACC
+Falrie,FALR
+Pont Beaudet,PBDT
+Saint-Hilaire,SHPN
+Bima,BIMA
+Lac Malouin,LMAL
+Club Iroquois,IRQC
+Stadacona,STAD
+Sanford,SANF
+Lac-Aux-Perles,PRLL
+Hirondelle,HRDL
+Club Nicole,NCLC
+Club Triton,TRTC
+Lac-Édouard,LEDW
+Cherokee,CHER
+Caribou,CARI
+Club Grégoire,GRGC
+Club Sommet,SMMC
+Summit,SMQU
+Brooks,BRQU
+Kiskissink,KISK
+Van Bruyssel,VBRU
+Lac Des Roches,LDES
+Kondiaronk,KOND
+Club Lizotte,LIZO
+Lac-Bouchette,LBOU
+Chambord,CHBD
+Hébertville,HEBV
+Jonquière,JONQ
+Prince Rupert,PRUP
+Cassiar Cannery,CASS
+Kwinitsa,KWIN
+Terrace,TRRC
+Usk,USKX
+Pacific,PACI
+Dorreen,DORR
+Cedarvale,CEDA
+Kitwanga,KITW
+New Hazelton,NHAZ
+Smithers,SMTR
+Telkwa,TELK
+Houston,HOUS
+Burns Lake,BRNL
+Endako,ENDA
+Fort Fraser,FFRA
+Vanderhoof,VDRH
+Prince George,PGEO
+White River,WHTR
+O'Brien,OBRI
+Amyot,AMYO
+Girdwood,GIRD
+Swanson,SWAN
+Franz,FRNZ
+Lochalsh,LOCH
+Missanabie,MSBI
+Dalton,DALT
+Bolkow,BOLK
+Nicholson,NICH
+Musk,MUSK
+Esher,ESHR
+Chapleau,CHAP
+Devon,DEVN
+Nemegos,NEME
+Kinogama,KINO
+Kormak,KORM
+Sultan,SULT
+Woman River,WOMR
+Ramsey,RAMS
+Roberts,RBRT
+Biscotasing,BISC
+Sinker,SNKR
+Metagama,MTGM
+Forks,FRKS
+Sheahan,SHEA
+Pogamasing,POGA
+Stralak,STRL
+Benny,BENN
+Cartier,CART
+Levack,LEVA
+Larchwood,LARC
+Chelmsford,CHEL
+Azilda,AZIL
+Sudbury,SUDB
+Harvey,HRVY
+Dunster,DNST
+Mcbride,MCBR
+Goat River,GOAT
+Loos,LOOS
+Dome Creek,DOMC
+Bend,BEND
+Penny,PENN
+Longworth,LWTH
+Hutton,HUTT
+Sinclair Mills,SINM
+Mcgregor,MCGR
+Upper Fraser,UFRZ
+Aleza Lake,ALZL
+Willow River,WILR
+Mimc,MIMC

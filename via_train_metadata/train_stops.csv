@@ -1,0 +1,914 @@
+ID,Train_Stop_ID,station
+2 (03-03),0,Vancouver
+2 (03-03),1,Mission Harbour
+2 (03-03),2,Agassiz
+2 (03-03),3,Katz
+2 (03-03),4,North Bend
+2 (03-03),5,Ashcroft
+2 (03-03),6,Kamloops North
+2 (03-03),7,Clearwater
+2 (03-03),8,Blue River
+2 (03-03),9,Valemount
+2 (03-03),10,Jasper
+2 (03-03),11,Hinton
+2 (03-03),12,Edson
+2 (03-03),13,Evansburg
+2 (03-03),14,Edmonton
+2 (03-03),15,Viking
+2 (03-03),16,Wainwright
+2 (03-03),17,Unity
+2 (03-03),18,Biggar
+2 (03-03),19,Saskatoon
+2 (03-03),20,Watrous
+2 (03-03),21,Melville
+2 (03-03),22,Rivers
+2 (03-03),23,Portage La Prairie
+2 (03-03),24,Winnipeg
+2 (03-03),25,Elma
+2 (03-03),26,Brereton Lake
+2 (03-03),27,Ophir
+2 (03-03),28,Winnitoba
+2 (03-03),29,Rice Lake
+2 (03-03),30,Copelands Landing
+2 (03-03),31,Malachi
+2 (03-03),32,Ottermere
+2 (03-03),33,Minaki
+2 (03-03),34,Redditt
+2 (03-03),35,Farlane
+2 (03-03),36,Canyon
+2 (03-03),37,Red Lake Road
+2 (03-03),38,Richan
+2 (03-03),39,Sioux Lookout
+2 (03-03),40,Savant Lake
+2 (03-03),41,Flindt Landing
+2 (03-03),42,Allanwater Bridge
+2 (03-03),43,Collins
+2 (03-03),44,Armstrong
+2 (03-03),45,Mud River
+2 (03-03),46,Ferland
+2 (03-03),47,Auden
+2 (03-03),48,Nakina
+2 (03-03),49,Longlac
+2 (03-03),50,Caramat
+2 (03-03),51,Hillsport
+2 (03-03),52,Hornepayne
+2 (03-03),53,Oba
+2 (03-03),54,Elsas
+2 (03-03),55,Foleyet
+2 (03-03),56,Gogama
+2 (03-03),57,Westree
+2 (03-03),58,Ruel
+2 (03-03),59,Felix
+2 (03-03),60,McKee's Camp
+2 (03-03),61,Laforest
+2 (03-03),62,Capreol
+2 (03-03),63,Sudbury (Jct.)
+2 (03-03),64,Parry Sound
+2 (03-03),65,Washago
+2 (03-03),66,Toronto
+1 (03-05),0,Toronto
+1 (03-05),1,Washago
+1 (03-05),2,South Parry
+1 (03-05),3,Sudbury (Jct.)
+1 (03-05),4,Capreol
+1 (03-05),5,Laforest
+1 (03-05),6,McKee's Camp
+1 (03-05),7,Felix
+1 (03-05),8,Ruel
+1 (03-05),9,Westree
+1 (03-05),10,Gogama
+1 (03-05),11,Foleyet
+1 (03-05),12,Elsas
+1 (03-05),13,Oba
+1 (03-05),14,Hornepayne
+1 (03-05),15,Hillsport
+1 (03-05),16,Caramat
+1 (03-05),17,Longlac
+1 (03-05),18,Nakina
+1 (03-05),19,Auden
+1 (03-05),20,Ferland
+1 (03-05),21,Mud River
+1 (03-05),22,Armstrong
+1 (03-05),23,Collins
+1 (03-05),24,Allanwater Bridge
+1 (03-05),25,Flindt Landing
+1 (03-05),26,Savant Lake
+1 (03-05),27,Sioux Lookout
+1 (03-05),28,Richan
+1 (03-05),29,Red Lake Road
+1 (03-05),30,Canyon
+1 (03-05),31,Farlane
+1 (03-05),32,Redditt
+1 (03-05),33,Minaki
+1 (03-05),34,Ottermere
+1 (03-05),35,Malachi
+1 (03-05),36,Copelands Landing
+1 (03-05),37,Rice Lake
+1 (03-05),38,Winnitoba
+1 (03-05),39,Ophir
+1 (03-05),40,Brereton Lake
+1 (03-05),41,Elma
+1 (03-05),42,Winnipeg
+1 (03-05),43,Portage La Prairie
+1 (03-05),44,Rivers
+1 (03-05),45,Melville
+1 (03-05),46,Watrous
+1 (03-05),47,Saskatoon
+1 (03-05),48,Biggar
+1 (03-05),49,Unity
+1 (03-05),50,Wainwright
+1 (03-05),51,Viking
+1 (03-05),52,Edmonton
+1 (03-05),53,Evansburg
+1 (03-05),54,Edson
+1 (03-05),55,Hinton
+1 (03-05),56,Jasper
+2 (03-07),0,Vancouver
+2 (03-07),1,Mission Harbour
+2 (03-07),2,Agassiz
+2 (03-07),3,Katz
+2 (03-07),4,North Bend
+2 (03-07),5,Ashcroft
+2 (03-07),6,Kamloops North
+2 (03-07),7,Clearwater
+2 (03-07),8,Blue River
+2 (03-07),9,Valemount
+692,0,Churchill
+692,1,Tidal
+692,2,Chesnaye
+692,3,M'Clintock
+692,4,O'Day
+692,5,Herchmer
+692,6,Thibaudeau
+692,7,Weir River
+692,8,Amery
+692,9,Bird
+692,10,Gillam
+692,11,Wivenhoe
+692,12,Ilford
+692,13,Pit Siding
+692,14,Bridgar
+692,15,Pikwitonei
+692,16,Sipiwesk
+692,17,Thompson
+692,18,Leven
+692,19,Thicket Portage
+692,20,Hockin
+692,21,Odhill
+692,22,Lyddal
+692,23,Wabowden
+692,24,Pipun
+692,25,Ponton
+692,26,Turnbull
+692,27,Wekusko
+692,28,Dyce
+692,29,Dering
+692,30,Cormorant
+692,31,Halcrow
+692,32,Orok
+692,33,The Pas
+692,34,Hudson Bay
+692,35,Reserve
+692,36,Endeavour
+692,37,Sturgis
+692,38,Canora
+692,39,Mikado
+692,40,Veregin
+692,41,Kamsack
+692,42,Togo
+20,0,Montréal
+20,1,St. Lambert
+20,2,St. Hyacinthe
+20,3,Drummondville
+20,4,Ste-Foy
+20,5,Québec
+22,0,Ottawa
+22,1,Casselman
+22,2,Alexandria
+22,3,Coteau
+22,4,Dorval
+22,5,Montréal
+22,6,St. Lambert
+22,7,St. Hyacinthe
+22,8,Drummondville
+22,9,Ste-Foy
+22,10,Québec
+24,0,Ottawa
+24,1,Alexandria
+24,2,Coteau
+24,3,Dorval
+24,4,Montréal
+24,5,St. Lambert
+24,6,St. Hyacinthe
+24,7,Drummondville
+24,8,Charny
+24,9,Ste-Foy
+24,10,Québec
+37,0,Québec
+37,1,Ste-Foy
+37,2,Drummondville
+37,3,St. Hyacinthe
+37,4,St. Lambert
+37,5,Montréal
+37,6,Dorval
+37,7,Coteau
+37,8,Alexandria
+37,9,Ottawa
+41,0,Ottawa
+41,1,Fallowfield
+41,2,Smiths Falls
+41,3,Brockville
+41,4,Kingston
+41,5,Napanee
+41,6,Belleville
+41,7,Trenton Jct.
+41,8,Cobourg
+41,9,Oshawa
+41,10,Toronto
+50,0,Toronto
+50,1,Guildwood
+50,2,Oshawa
+50,3,Cobourg
+50,4,Belleville
+50,5,Kingston
+50,6,Brockville
+50,7,Smiths Falls
+50,8,Fallowfield
+50,9,Ottawa
+52,0,Toronto
+52,1,Guildwood
+52,2,Oshawa
+52,3,Cobourg
+52,4,Belleville
+52,5,Kingston
+52,6,Brockville
+52,7,Smiths Falls
+52,8,Fallowfield
+52,9,Ottawa
+53,0,Ottawa
+53,1,Fallowfield
+53,2,Brockville
+53,3,Gananoque
+53,4,Kingston
+53,5,Belleville
+53,6,Cobourg
+53,7,Oshawa
+53,8,Guildwood
+53,9,Toronto
+60,0,Toronto
+60,1,Guildwood
+60,2,Oshawa
+60,3,Cobourg
+60,4,Belleville
+60,5,Kingston
+60,6,Cornwall
+60,7,Dorval
+60,8,Montréal
+61,0,Montréal
+61,1,Dorval
+61,2,Cornwall
+61,3,Kingston
+61,4,Belleville
+61,5,Oshawa
+61,6,Guildwood
+61,7,Toronto
+64,0,Toronto
+64,1,Guildwood
+64,2,Oshawa
+64,3,Cobourg
+64,4,Belleville
+64,5,Kingston
+64,6,Brockville
+64,7,Cornwall
+64,8,Dorval
+64,9,Montréal
+65,0,Montréal
+65,1,Dorval
+65,2,Cornwall
+65,3,Kingston
+65,4,Belleville
+65,5,Cobourg
+65,6,Oshawa
+65,7,Guildwood
+65,8,Toronto
+67,0,Montréal
+67,1,Dorval
+67,2,Cornwall
+67,3,Kingston
+67,4,Belleville
+67,5,Cobourg
+67,6,Oshawa
+67,7,Toronto
+71,0,Toronto
+71,1,Oakville
+71,2,Aldershot
+71,3,Brantford
+71,4,Woodstock
+71,5,Ingersoll
+71,6,London
+71,7,Glencoe
+71,8,Chatham
+71,9,Windsor
+73,0,Toronto
+73,1,Oakville
+73,2,Aldershot
+73,3,Brantford
+73,4,Woodstock
+73,5,London
+73,6,Chatham
+73,7,Windsor
+70,0,Windsor
+70,1,Chatham
+70,2,London
+70,3,Ingersoll
+70,4,Woodstock
+70,5,Brantford
+70,6,Aldershot
+70,7,Oakville
+70,8,Toronto
+72,0,Windsor
+72,1,Chatham
+72,2,Glencoe
+72,3,London
+72,4,Ingersoll
+72,5,Woodstock
+72,6,Brantford
+72,7,Aldershot
+72,8,Oakville
+72,9,Toronto
+82,0,London
+82,1,Woodstock
+82,2,Brantford
+82,3,Toronto
+84,0,Sarnia
+84,1,Wyoming
+84,2,Strathroy
+84,3,London
+84,4,St.Marys
+84,5,Stratford
+84,6,Kitchener
+84,7,Guelph
+84,8,Georgetown
+84,9,Brampton
+84,10,Malton
+84,11,Toronto
+62,0,Toronto
+62,1,Guildwood
+62,2,Oshawa
+62,3,Cobourg
+62,4,Belleville
+62,5,Kingston
+62,6,Cornwall
+62,7,Dorval
+62,8,Montréal
+643,0,Ottawa
+643,1,Fallowfield
+643,2,Smiths Falls
+643,3,Brockville
+643,4,Kingston
+643,5,Napanee
+643,6,Belleville
+643,7,Trenton Jct.
+643,8,Cobourg
+643,9,Port Hope
+643,10,Oshawa
+643,11,Guildwood
+643,12,Toronto
+97,0,Toronto
+97,1,Aldershot
+97,2,Grimsby
+97,3,St. Catharines
+97,4,Niagara Falls
+43,0,Ottawa
+43,1,Fallowfield
+43,2,Kingston
+43,3,Guildwood
+43,4,Toronto
+45,0,Ottawa
+45,1,Fallowfield
+45,2,Kingston
+45,3,Toronto
+33,0,Québec
+33,1,Ste-Foy
+33,2,Charny
+33,3,Drummondville
+33,4,St. Hyacinthe
+33,5,St. Lambert
+33,6,Montréal
+33,7,Dorval
+33,8,Alexandria
+33,9,Casselman
+33,10,Ottawa
+603,0,Montréal
+603,1,Sauvé
+603,2,Anjou
+603,3,Joliette
+603,4,St-Justin
+603,5,St-Paulin
+603,6,Charette
+603,7,Shawinigan
+603,8,Grand-Mère
+603,9,Garneau
+603,10,Saint-Tite
+603,11,Hervey
+603,12,La Tuque
+603,13,Fitzpatrick
+603,14,Cressman
+603,15,Club Vermillion
+603,16,Rapide-Blanc
+603,17,Lac-Darey
+603,18,Duplessis
+603,19,Mctavish
+603,20,Windigo
+603,21,Ferguson
+603,22,Club Wigwam
+603,23,Vandry
+603,24,Dessane
+603,25,Saint-Maurice Rivière-Boom
+603,26,Weymont
+603,27,Sanmaur
+603,28,Cann
+603,29,Club Belanger
+603,30,Hibbard
+603,31,Casey
+603,32,Mccarthy
+603,33,Club Sisco
+603,34,Manjobagues
+603,35,Parent
+603,36,Timbrell
+603,37,Club Rita Inc.
+603,38,Strachan
+603,39,Club Maniwawa
+603,40,Greening
+603,41,Oskelaneo Lodge
+603,42,Rivière Oskélanéo
+603,43,Clova
+603,44,Coquar
+603,45,Monet
+603,46,Consolidated Bathurst
+603,47,Club Kapitachuan
+603,48,Bourmont
+603,49,Club Beaudin Inc.
+603,50,Langlade
+603,51,Da-Rou-Lac Lodge
+603,52,Gagnon
+603,53,Dix
+603,54,Bolger
+603,55,Forsythe
+603,56,Press
+603,57,Signai
+603,58,Mégiscane
+603,59,Senneterre
+15,0,Halifax
+15,1,Truro
+15,2,Springhill Jct
+15,3,Amherst
+15,4,Sackville
+15,5,Moncton
+15,6,Rogersville
+15,7,Miramichi
+15,8,Bathurst
+15,9,Petit Rocher
+15,10,Jacquet River
+15,11,Charlo
+15,12,Campbellton
+15,13,Matapedia
+15,14,Causapscal
+15,15,Amqui
+15,16,Sayabec
+15,17,Mont-Joli
+15,18,Rimouski
+15,19,Trois Pistoles
+15,20,Rivière-Du-Loup
+15,21,La Pocatière
+15,22,Montmagny
+15,23,Ste-Foy
+15,24,Drummondville
+15,25,St. Hyacinthe
+15,26,St. Lambert
+15,27,Montréal
+601,0,Montréal
+601,1,Sauvé
+601,2,Anjou
+601,3,Joliette
+601,4,St-Justin
+601,5,St-Paulin
+601,6,Charette
+601,7,Shawinigan
+601,8,Grand-Mère
+601,9,Garneau
+601,10,Saint-Tite
+601,11,Hervey
+601,12,Rousseau
+601,13,Rivière-À-Pierre
+601,14,Miquick
+601,15,Club Jacques-Cartier
+601,16,Falrie
+601,17,Pont Beaudet
+601,18,Saint-Hilaire
+601,19,Bima
+601,20,Lac Malouin
+601,21,Club Iroquois
+601,22,Stadacona
+601,23,Sanford
+601,24,Lac-Aux-Perles
+601,25,Hirondelle
+601,26,Club Nicole
+601,27,Club Triton
+601,28,Lac-Édouard
+601,29,Cherokee
+601,30,Caribou
+601,31,Club Grégoire
+601,32,Club Sommet
+601,33,Summit
+601,34,Brooks
+601,35,Kiskissink
+601,36,Van Bruyssel
+601,37,Lac Des Roches
+601,38,Kondiaronk
+601,39,Club Lizotte
+601,40,Lac-Bouchette
+601,41,Chambord
+601,42,Hébertville
+601,43,Jonquière
+6,0,Prince Rupert
+6,1,Cassiar Cannery
+6,2,Kwinitsa
+6,3,Terrace
+6,4,Usk
+6,5,Pacific
+6,6,Dorreen
+6,7,Cedarvale
+6,8,Kitwanga
+6,9,New Hazelton
+6,10,Smithers
+6,11,Telkwa
+6,12,Houston
+6,13,Burns Lake
+6,14,Endako
+6,15,Fort Fraser
+6,16,Vanderhoof
+6,17,Prince George
+186,0,White River
+186,1,O'Brien
+186,2,Amyot
+186,3,Girdwood
+186,4,Swanson
+186,5,Franz
+186,6,Lochalsh
+186,7,Missanabie
+186,8,Dalton
+186,9,Bolkow
+186,10,Nicholson
+186,11,Musk
+186,12,Esher
+186,13,Chapleau
+186,14,Devon
+186,15,Nemegos
+186,16,Kinogama
+186,17,Kormak
+186,18,Sultan
+186,19,Woman River
+186,20,Ramsey
+186,21,Roberts
+186,22,Biscotasing
+186,23,Sinker
+186,24,Metagama
+186,25,Forks
+186,26,Sheahan
+186,27,Pogamasing
+186,28,Stralak
+186,29,Benny
+186,30,Cartier
+186,31,Levack
+186,32,Larchwood
+186,33,Chelmsford
+186,34,Azilda
+186,35,Sudbury
+5,0,Jasper
+5,1,Harvey
+5,2,Dunster
+5,3,Mcbride
+5,4,Goat River
+5,5,Loos
+5,6,Dome Creek
+5,7,Bend
+5,8,Penny
+5,9,Longworth
+5,10,Hutton
+5,11,Sinclair Mills
+5,12,Mcgregor
+5,13,Upper Fraser
+5,14,Aleza Lake
+5,15,Willow River
+5,16,Prince George
+63,0,Montréal
+63,1,Dorval
+63,2,Cornwall
+63,3,Brockville
+63,4,Kingston
+63,5,Belleville
+63,6,Cobourg
+63,7,Oshawa
+63,8,Guildwood
+63,9,Toronto
+40,0,Toronto
+40,1,Guildwood
+40,2,Belleville
+40,3,Kingston
+40,4,Fallowfield
+40,5,Ottawa
+31,0,Montréal
+31,1,Dorval
+31,2,Alexandria
+31,3,Casselman
+31,4,Ottawa
+691,0,The Pas
+691,1,Orok
+691,2,Halcrow
+691,3,Cormorant
+691,4,Dering
+691,5,Dyce
+691,6,Wekusko
+691,7,Turnbull
+691,8,Ponton
+691,9,Pipun
+691,10,Wabowden
+691,11,Lyddal
+691,12,Odhill
+691,13,Hockin
+691,14,Thicket Portage
+691,15,Leven
+691,16,Thompson
+691,17,Sipiwesk
+691,18,Pikwitonei
+691,19,Bridgar
+691,20,Pit Siding
+691,21,Ilford
+691,22,Wivenhoe
+691,23,Gillam
+691,24,Bird
+691,25,Amery
+691,26,Weir River
+691,27,Thibaudeau
+691,28,Herchmer
+691,29,O'Day
+691,30,M'Clintock
+691,31,Chesnaye
+691,32,Tidal
+691,33,Churchill
+35,0,Québec
+35,1,Ste-Foy
+35,2,Charny
+35,3,Drummondville
+35,4,St. Hyacinthe
+35,5,St. Lambert
+35,6,Montréal
+35,7,Dorval
+35,8,Coteau
+35,9,Alexandria
+35,10,Casselman
+35,11,Ottawa
+47,0,Ottawa
+47,1,Fallowfield
+47,2,Smiths Falls
+47,3,Brockville
+47,4,Gananoque
+47,5,Kingston
+47,6,Belleville
+47,7,Oshawa
+47,8,Guildwood
+47,9,Toronto
+76,0,Windsor
+76,1,Chatham
+76,2,Glencoe
+76,3,London
+76,4,Brantford
+76,5,Aldershot
+76,6,Oakville
+76,7,Toronto
+76,8,Mimc
+645,0,Ottawa
+645,1,Fallowfield
+645,2,Kingston
+645,3,Belleville
+645,4,Oshawa
+645,5,Toronto
+44,0,Toronto
+44,1,Oshawa
+44,2,Kingston
+44,3,Brockville
+44,4,Smiths Falls
+44,5,Fallowfield
+44,6,Ottawa
+39,0,Québec
+39,1,Ste-Foy
+39,2,Drummondville
+39,3,St. Lambert
+39,4,Montréal
+39,5,Dorval
+39,6,Coteau
+39,7,Alexandria
+39,8,Ottawa
+26,0,Ottawa
+26,1,Alexandria
+26,2,Coteau
+26,3,Dorval
+26,4,Montréal
+26,5,St. Lambert
+26,6,St. Hyacinthe
+26,7,Drummondville
+26,8,Charny
+26,9,Ste-Foy
+26,10,Québec
+66,0,Toronto
+66,1,Guildwood
+66,2,Oshawa
+66,3,Belleville
+66,4,Kingston
+66,5,Cornwall
+66,6,Dorval
+66,7,Montréal
+46,0,Toronto
+46,1,Guildwood
+46,2,Oshawa
+46,3,Cobourg
+46,4,Kingston
+46,5,Brockville
+46,6,Fallowfield
+46,7,Ottawa
+28,0,Ottawa
+28,1,Casselman
+28,2,Alexandria
+28,3,Coteau
+28,4,Dorval
+28,5,Montréal
+28,6,St. Lambert
+28,7,St. Hyacinthe
+28,8,Drummondville
+28,9,Charny
+28,10,Ste-Foy
+28,11,Québec
+83,0,Toronto
+83,1,Aldershot
+83,2,Brantford
+83,3,Woodstock
+83,4,London
+646,0,Toronto
+646,1,Guildwood
+646,2,Oshawa
+646,3,Belleville
+646,4,Fallowfield
+646,5,Ottawa
+69,0,Montréal
+69,1,Dorval
+69,2,Cornwall
+69,3,Brockville
+69,4,Kingston
+69,5,Oshawa
+69,6,Guildwood
+69,7,Toronto
+647,0,Ottawa
+647,1,Fallowfield
+647,2,Kingston
+647,3,Oshawa
+647,4,Guildwood
+647,5,Toronto
+68,0,Toronto
+68,1,Oshawa
+68,2,Cobourg
+68,3,Belleville
+68,4,Kingston
+68,5,Brockville
+68,6,Cornwall
+68,7,Dorval
+68,8,Montréal
+54,0,Toronto
+54,1,Guildwood
+54,2,Oshawa
+54,3,Port Hope
+54,4,Cobourg
+54,5,Trenton Jct.
+54,6,Belleville
+54,7,Napanee
+54,8,Kingston
+54,9,Brockville
+54,10,Smiths Falls
+54,11,Fallowfield
+54,12,Ottawa
+87,0,Toronto
+87,1,Malton
+87,2,Brampton
+87,3,Georgetown
+87,4,Guelph
+87,5,Kitchener
+87,6,Stratford
+87,7,St.Marys
+87,8,London
+87,9,Strathroy
+87,10,Wyoming
+87,11,Sarnia
+29,0,Québec
+29,1,Ste-Foy
+29,2,Drummondville
+29,3,St. Hyacinthe
+29,4,St. Lambert
+29,5,Montréal
+75,0,Toronto
+75,1,Oakville
+75,2,Aldershot
+75,3,Brantford
+75,4,Woodstock
+75,5,Ingersoll
+75,6,London
+75,7,Glencoe
+75,8,Chatham
+75,9,Windsor
+38,0,Ottawa
+38,1,Casselman
+38,2,Alexandria
+38,3,Dorval
+38,4,Montréal
+668,0,Toronto
+668,1,Guildwood
+668,2,Oshawa
+668,3,Kingston
+668,4,Cornwall
+668,5,Dorval
+668,6,Montréal
+59,0,Ottawa
+59,1,Fallowfield
+59,2,Smiths Falls
+59,3,Brockville
+59,4,Kingston
+59,5,Belleville
+59,6,Trenton Jct.
+59,7,Cobourg
+59,8,Oshawa
+59,9,Guildwood
+59,10,Toronto
+669,0,Montréal
+669,1,Dorval
+669,2,Cornwall
+669,3,Kingston
+669,4,Oshawa
+669,5,Guildwood
+669,6,Toronto
+78,0,Windsor
+78,1,Chatham
+78,2,Glencoe
+78,3,London
+78,4,Ingersoll
+78,5,Woodstock
+78,6,Brantford
+78,7,Aldershot
+78,8,Oakville
+78,9,Toronto
+14,0,Montréal
+14,1,St. Lambert
+14,2,St. Hyacinthe
+14,3,Drummondville
+14,4,Ste-Foy
+14,5,Montmagny
+14,6,La Pocatière
+14,7,Rivière-Du-Loup
+14,8,Trois Pistoles
+14,9,Rimouski
+14,10,Mont-Joli
+14,11,Sayabec
+14,12,Amqui
+14,13,Causapscal
+14,14,Matapedia
+14,15,Campbellton
+14,16,Charlo
+14,17,Jacquet River
+14,18,Petit Rocher
+14,19,Bathurst
+14,20,Miramichi
+48,0,Toronto
+48,1,Guildwood
+48,2,Oshawa
+48,3,Port Hope
+48,4,Cobourg
+48,5,Trenton Jct.
+48,6,Belleville
+48,7,Napanee
+48,8,Kingston
+48,9,Gananoque
+48,10,Brockville
+48,11,Smiths Falls
+48,12,Fallowfield
+48,13,Ottawa
+98,0,St. Catharines
+98,1,Oakville
+98,2,Toronto
+79,0,Toronto
+79,1,Oakville
+79,2,Aldershot
+79,3,Brantford
+79,4,Woodstock
+79,5,Ingersoll
+79,6,London
+79,7,Glencoe
+79,8,Chatham
+79,9,Windsor
