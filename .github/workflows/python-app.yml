@@ -28,6 +28,6 @@ jobs:
     - name: execute py script # run file
       run: |
         python save_via_data.py
-    - uses: mikeal/publish-to-github-action@main
+    - uses: mikeal/publish-to-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you
