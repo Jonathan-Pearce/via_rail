@@ -8,7 +8,7 @@ on:
     - cron:  '0 */3 * * *' #Ref https://crontab.guru/examples.html
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
