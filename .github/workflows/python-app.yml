@@ -5,7 +5,7 @@ name: Python application
 
 on:
   schedule:
-    - cron:  '0 */3 * * *' #Ref https://crontab.guru/examples.html
+    - cron:  '0 4 * * *' #Ref https://crontab.guru/examples.html
 
 permissions:
   contents: write
