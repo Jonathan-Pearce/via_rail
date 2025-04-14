@@ -15,26 +15,29 @@ stop_query = """SELECT STOP_ID FROM tbl_stop_v4 WHERE TRAIN = ? AND ROUTE_STOP =
 
 def get_table_index(query, string, cur):
     #get location index
-    cur.execute(location_query, (location_string,))
+    cur.execute(location_query, (string,))
     row = cur.fetchone()
     to_idx = row[0]
     return(to_idx)
 
-def set_location(location_data, cur):
+def set_location(location_data, cur, con):
     #location_data expects location and location code
     db_return_value = cur.execute(location_insert, location_data)
+    con.commit()
     return db_return_value
 
 def get_location(location_string, cur):
     #get location index
+    print(location_string)
     cur.execute(location_query, (location_string,))
     row = cur.fetchone()
     to_idx = row[0]
     return(to_idx)
 
-def set_route(route_data, cur):
+def set_route(route_data, cur, con):
     #location_data expects route start and route end
     db_return_value = cur.execute(route_insert, route_data)
+    con.commit()
     return db_return_value
 
 def get_route(from_idx, to_idx, cur):
@@ -44,9 +47,10 @@ def get_route(from_idx, to_idx, cur):
     route_idx = row[0]
     return(route_idx)
 
-def set_train(train_data, cur):
+def set_train(train_data, cur, con):
     #location_data expects train number and route
     db_return_value = cur.execute(train_insert, train_data)
+    con.commit()
     return db_return_value
 
 def get_train(train_number, route_idx, cur):
@@ -56,9 +60,10 @@ def get_train(train_number, route_idx, cur):
     train_idx = row[0]
     return(train_idx)
 
-def set_stop(stop_data, cur):
+def set_stop(stop_data, cur, con):
     #location_data expects train, route stop and route next stop
     db_return_value = cur.execute(stop_insert, stop_data)
+    con.commit()
     return db_return_value
 
 def get_stop(train_idx, route_stop, route_next_stop, cur):
@@ -68,7 +73,8 @@ def get_stop(train_idx, route_stop, route_next_stop, cur):
     stop_idx = row[0]
     return(stop_idx)
 
-def set_via_data(via_data, cur):
+def set_via_data(via_data, cur, con):
     #location_data expects train stop, schedule datetime, arrival datetime, minutes late and date train
     db_return_value = cur.execute(via_data_insert, via_data)
+    con.commit()
     return db_return_value

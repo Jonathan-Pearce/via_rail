@@ -1,7 +1,8 @@
 import os
 import json
+import pandas as pd
 
-import pipeline.helpers as helpers  
+import helpers
 
 # Path to the folder containing raw data files
 raw_data_folder = 'raw_data'
@@ -18,9 +19,10 @@ for filename in os.listdir(raw_data_folder):
         print(f"Processing JSON file: {filename}")
         with open(file_path, 'r') as file:
             try:
-                content = json.load(file)
+                #content = json.load(file)
+                content = pd.read_json(file)
                 # Process the JSON content as needed
-                helpers.json_data_to_database(content)
+                helpers.json_data_to_database(content, con, cur)
                 #print(content)
             except json.JSONDecodeError as e:
                 print(f"Error decoding JSON from file {filename}: {e}")

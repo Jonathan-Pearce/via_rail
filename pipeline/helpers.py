@@ -1,10 +1,10 @@
 import sqlite3
 import pandas as pd
 
-import pipeline.database_helpers as database_helpers
+import database_helpers
 
 def connect_to_database(database_name):
-    con = sqlite3.connect("via_data.db")
+    con = sqlite3.connect("via_data_test.db")
     cur = con.cursor()
     return con, cur
 
@@ -50,25 +50,27 @@ def get_clean_data(df):
 
     return via_day_data_clean
 
-def set_stop_logic(prev_stop_location_id, location_idx, train_idx, to_idx, cur):
+def set_stop_logic(prev_stop_location_id, location_idx, train_idx, to_idx, cur, con):
     
     #if no previous stop data (i.e. this is the first row for the train)
     #nothing to write to database just save indexes
     if prev_stop_location_id is None:
         prev_stop_location_id = location_idx
         train_id = train_idx
+        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
     #if train id does not equal train_idx then we are on a new train (first stop)
     #nothing to write to database just save indexes
     elif train_id != train_idx:
         prev_stop_location_id = location_idx
         train_id = train_idx
+        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
     else:
-        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur)
+        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
 
         #check if location is equal to end of route
         #write last stop row to database
         if location_idx == to_idx:
-            database_helpers.set_stop((train_idx, location_idx, location_idx), cur)
+            database_helpers.set_stop((train_idx, location_idx, location_idx), cur, con)
 
         prev_stop_location_id = location_idx
 
@@ -84,7 +86,7 @@ def json_data_to_database(json_data, con, cur):
         #change to upper case to align with to/from variables
         location_i = row['station'].upper()
         location_code_i = row['code']
-        database_helpers.set_location((location_i, location_i), cur)
+        database_helpers.set_location((location_i, location_i), cur, con)
 
     #define previous row/stop data
     prev_stop_location_id = None
@@ -94,11 +96,11 @@ def json_data_to_database(json_data, con, cur):
     for idx, row in clean_data.iterrows():
 
         #change to upper case to align with to/from variables
-        from_i = row['from']
-        to_i = row['to']
+        from_i = row['from'].upper()
+        to_i = row['to'].upper()
         train_num = row['ID']
         location_i = row['station'].upper()
-        next_location_i = row['next_station']
+        next_location_i = row['next_station'].upper()
 
         departed_boolean = row['departed']
         arrived_boolean = row['arrived']
@@ -116,13 +118,13 @@ def json_data_to_database(json_data, con, cur):
         from_idx = database_helpers.get_location(from_i, cur)
 
         #add to route table
-        database_helpers.set_route((from_idx, to_idx), cur)
+        database_helpers.set_route((from_idx, to_idx), cur, con)
 
         #get route
         route_idx = database_helpers.get_route(from_idx, to_idx, cur)
 
         #add to train table
-        database_helpers.set_train((train_num, route_idx), cur)
+        database_helpers.set_train((train_num, route_idx), cur, con)
 
         #get train
         train_idx = database_helpers.get_train(train_num, route_idx, cur)
@@ -140,14 +142,15 @@ def json_data_to_database(json_data, con, cur):
         
         #add to stop table
         #database_helpers.set_stop((train_idx, location_index, next_location_i), cur)
-        prev_stop_location_id, train_id = set_stop_logic(prev_stop_location_id, location_index, train_idx, to_idx, cur)
+        prev_stop_location_id, train_idx = set_stop_logic(prev_stop_location_id, location_idx, train_idx, to_idx, cur, con)
         
         #get stop
-        stop_idx = database_helpers.get_stop(train_idx, location_index, next_location_i, cur)
+        print(train_idx, location_idx, next_location_idx)
+        stop_idx = database_helpers.get_stop(train_idx, location_idx, next_location_idx, cur)
 
         #If train has arrived and departed then save data
         if departed_boolean and arrived_boolean:
             data_tuple = (stop_idx, scheduled_time.strftime("%Y-%m-%d %H:%M:%S"), estimated_time.strftime("%Y-%m-%d %H:%M:%S"), time_diff, train_departure_schedule.strftime("%Y-%m-%d"))
-            database_helpers.set_via_data(data_tuple, cur)
+            database_helpers.set_via_data(data_tuple, cur, con)
 
 
