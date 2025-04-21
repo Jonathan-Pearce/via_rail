@@ -8,7 +8,7 @@ import helpers
 raw_data_folder = 'raw_data'
 
 #setup database connection
-con, cur = helpers.connect_to_database("via_data.db")
+con, cur = helpers.connect_to_database("via_data_test.db")
 
 # Iterate through each file in the folder
 for filename in os.listdir(raw_data_folder):

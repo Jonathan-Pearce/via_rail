@@ -4,7 +4,7 @@ import pandas as pd
 import database_helpers
 
 def connect_to_database(database_name):
-    con = sqlite3.connect("via_data_test.db")
+    con = sqlite3.connect(database_name)
     cur = con.cursor()
     return con, cur
 
@@ -39,9 +39,9 @@ def get_clean_data(df):
     test_2['scheduled'] = pd.to_datetime(test_2['scheduled'], errors = 'coerce')
 
     #subset columns for clean data
-    via_day_data_clean = test_2[['station','code', 'ID','scheduled','estimated','departed','diffMin', 'arrived','from','to']]
+    via_day_data_clean = test_2[['station','code', 'ID','scheduled','estimated','departed','diffMin', 'arrived','from','to']].copy()
 
-    via_day_data_clean['next_station'] = via_day_data_clean.groupby('ID')['station'].shift(-1)
+    via_day_data_clean['prev_station'] = via_day_data_clean.groupby('ID')['station'].shift(1)
     #last row of each train has NA - try to impute
     #via_day_data_clean.loc[(via_day_data_clean.station.upper() == via_day_data_clean.to), "next_stop"] = via_day_data_clean.to
 
@@ -49,32 +49,6 @@ def get_clean_data(df):
     via_day_data_clean['train_departure_schedule'] = via_day_data_clean.groupby('ID')['scheduled'].transform('min')
 
     return via_day_data_clean
-
-def set_stop_logic(prev_stop_location_id, location_idx, train_idx, to_idx, cur, con):
-    
-    #if no previous stop data (i.e. this is the first row for the train)
-    #nothing to write to database just save indexes
-    if prev_stop_location_id is None:
-        prev_stop_location_id = location_idx
-        train_id = train_idx
-        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
-    #if train id does not equal train_idx then we are on a new train (first stop)
-    #nothing to write to database just save indexes
-    elif train_id != train_idx:
-        prev_stop_location_id = location_idx
-        train_id = train_idx
-        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
-    else:
-        database_helpers.set_stop((train_idx, prev_stop_location_id, location_idx), cur, con)
-
-        #check if location is equal to end of route
-        #write last stop row to database
-        if location_idx == to_idx:
-            database_helpers.set_stop((train_idx, location_idx, location_idx), cur, con)
-
-        prev_stop_location_id = location_idx
-
-    return prev_stop_location_id, train_id
 
 
 def json_data_to_database(json_data, con, cur):
@@ -86,11 +60,8 @@ def json_data_to_database(json_data, con, cur):
         #change to upper case to align with to/from variables
         location_i = row['station'].upper()
         location_code_i = row['code']
-        database_helpers.set_location((location_i, location_i), cur, con)
+        database_helpers.set_location((location_i, location_code_i), cur, con)
 
-    #define previous row/stop data
-    prev_stop_location_id = None
-    train_id = None
 
     #process data
     for idx, row in clean_data.iterrows():
@@ -98,9 +69,14 @@ def json_data_to_database(json_data, con, cur):
         #change to upper case to align with to/from variables
         from_i = row['from'].upper()
         to_i = row['to'].upper()
-        train_num = row['ID']
         location_i = row['station'].upper()
-        next_location_i = row['next_station'].upper()
+        previous_location_i = row['prev_station']
+        if pd.isna(previous_location_i):
+            previous_location_i = location_i
+        else:
+            previous_location_i = previous_location_i.upper()
+
+        train_num = row['ID']
 
         departed_boolean = row['departed']
         arrived_boolean = row['arrived']
@@ -112,6 +88,8 @@ def json_data_to_database(json_data, con, cur):
 
         #get location index
         location_idx = database_helpers.get_location(location_i, cur)
+        #get previous location index
+        previous_location_idx = database_helpers.get_location(previous_location_i, cur)
         #get to index
         to_idx = database_helpers.get_location(to_i, cur)
         #get from index
@@ -124,33 +102,20 @@ def json_data_to_database(json_data, con, cur):
         route_idx = database_helpers.get_route(from_idx, to_idx, cur)
 
         #add to train table
+        print(train_num)
+        print(route_idx)
         database_helpers.set_train((train_num, route_idx), cur, con)
 
         #get train
         train_idx = database_helpers.get_train(train_num, route_idx, cur)
 
-        # Check if next_location_i is not None before proceeding
-        if pd.isna(next_location_i):
-            if(location_i == to_i):
-                # If the current location is the same as the destination
-                next_location_idx = location_idx
-            #if stop and end of route are not the same then move forward
-            else:
-                continue
-        else:
-            next_location_idx = database_helpers.get_location(next_location_i, cur)
-        
-        #add to stop table
-        #database_helpers.set_stop((train_idx, location_index, next_location_i), cur)
-        prev_stop_location_id, train_idx = set_stop_logic(prev_stop_location_id, location_idx, train_idx, to_idx, cur, con)
-        
-        #get stop
-        print(train_idx, location_idx, next_location_idx)
-        stop_idx = database_helpers.get_stop(train_idx, location_idx, next_location_idx, cur)
+        database_helpers.set_stop((train_idx, location_idx, previous_location_idx), cur, con)
+        stop_idx = database_helpers.get_stop(train_idx, location_idx, previous_location_idx, cur)
 
         #If train has arrived and departed then save data
         if departed_boolean and arrived_boolean:
-            data_tuple = (stop_idx, scheduled_time.strftime("%Y-%m-%d %H:%M:%S"), estimated_time.strftime("%Y-%m-%d %H:%M:%S"), time_diff, train_departure_schedule.strftime("%Y-%m-%d"))
-            database_helpers.set_via_data(data_tuple, cur, con)
+            if (not pd.isnull(scheduled_time)) and (not pd.isnull(estimated_time) and (not pd.isnull(time_diff)) and (not pd.isnull(train_departure_schedule))):
+                data_tuple = (stop_idx, scheduled_time.strftime("%Y-%m-%d %H:%M:%S"), estimated_time.strftime("%Y-%m-%d %H:%M:%S"), time_diff, train_departure_schedule.strftime("%Y-%m-%d"))
+                database_helpers.set_via_data(data_tuple, cur, con)
 
 

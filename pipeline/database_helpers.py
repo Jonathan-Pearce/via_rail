@@ -3,15 +3,15 @@ import sqlite3
 #insertions
 location_insert = """INSERT INTO tbl_location_v2(LOCATION, LOCATION_CODE) VALUES (?, ?) ON CONFLICT(LOCATION) DO NOTHING;"""
 route_insert = """INSERT INTO tbl_route_v3(ROUTE_START, ROUTE_END) VALUES (?, ?) ON CONFLICT(ROUTE_START, ROUTE_END) DO NOTHING;"""
-train_insert = """INSERT INTO tbl_train_v3(TRAIN_NUMBER, ROUTE) VALUES (?, ?) ON CONFLICT(TRAIN_NUMBER, ROUTE) DO NOTHING;"""
-stop_insert = """INSERT INTO tbl_stop_v4(TRAIN, ROUTE_STOP, ROUTE_NEXT_STOP) VALUES (?, ?, ?) ON CONFLICT(TRAIN, ROUTE_STOP, ROUTE_NEXT_STOP) DO NOTHING;"""
+train_insert = """INSERT INTO tbl_train_v4(TRAIN_NUMBER, ROUTE) VALUES (?, ?) ON CONFLICT(TRAIN_NUMBER, ROUTE) DO NOTHING;"""
+stop_insert = """INSERT INTO tbl_stop_v5(TRAIN, ROUTE_STOP, ROUTE_PREV_STOP) VALUES (?, ?, ?) ON CONFLICT(TRAIN, ROUTE_STOP, ROUTE_PREV_STOP) DO NOTHING;"""
 via_data_insert = """INSERT INTO tbl_via_data_v4(TRAIN_STOP, SCHEDULE_DATETIME, ARRIVAL_DATETIME, MINUTES_LATE, DATE_TRAIN) VALUES (?, ?, ?, ?, ?) ON CONFLICT(TRAIN_STOP, DATE_TRAIN) DO NOTHING;"""
 
 #queries
 location_query = """SELECT LOCATION_ID FROM tbl_location_v2 WHERE LOCATION = ?"""
 route_query = """SELECT ROUTE_ID FROM tbl_route_v3 WHERE ROUTE_START = ? AND ROUTE_END = ?"""
-train_query = """SELECT TRAIN_ID FROM tbl_train_v3 WHERE TRAIN_NUMBER = ? AND ROUTE = ?"""
-stop_query = """SELECT STOP_ID FROM tbl_stop_v4 WHERE TRAIN = ? AND ROUTE_STOP = ? AND ROUTE_NEXT_STOP = ?"""
+train_query = """SELECT TRAIN_ID FROM tbl_train_v4 WHERE TRAIN_NUMBER = ? AND ROUTE = ?"""
+stop_query = """SELECT STOP_ID FROM tbl_stop_v5 WHERE TRAIN = ? AND ROUTE_STOP = ? AND ROUTE_PREV_STOP = ?"""
 
 def get_table_index(query, string, cur):
     #get location index
@@ -28,7 +28,6 @@ def set_location(location_data, cur, con):
 
 def get_location(location_string, cur):
     #get location index
-    print(location_string)
     cur.execute(location_query, (location_string,))
     row = cur.fetchone()
     to_idx = row[0]
@@ -66,9 +65,9 @@ def set_stop(stop_data, cur, con):
     con.commit()
     return db_return_value
 
-def get_stop(train_idx, route_stop, route_next_stop, cur):
+def get_stop(train_idx, route_stop, route_prev_stop, cur):
     #get stop index
-    cur.execute(stop_query, (train_idx, route_stop, route_next_stop))
+    cur.execute(stop_query, (train_idx, route_stop, route_prev_stop))
     row = cur.fetchone()
     stop_idx = row[0]
     return(stop_idx)
