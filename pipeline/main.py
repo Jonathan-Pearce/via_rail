@@ -1,14 +1,10 @@
 import os
 import json
 import pandas as pd
-
 import helpers
 
 # Path to the folder containing raw data files
 raw_data_folder = 'raw_data'
-
-#setup database connection
-con, cur = helpers.connect_to_database("via_data_test.db")
 
 # Iterate through each file in the folder
 for filename in os.listdir(raw_data_folder):
@@ -22,7 +18,7 @@ for filename in os.listdir(raw_data_folder):
                 #content = json.load(file)
                 content = pd.read_json(file)
                 # Process the JSON content as needed
-                helpers.json_data_to_database(content, con, cur)
+                helpers.clean_data(file_path, content)
                 #print(content)
             except json.JSONDecodeError as e:
                 print(f"Error decoding JSON from file {filename}: {e}")
