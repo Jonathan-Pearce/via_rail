@@ -5,9 +5,8 @@ name: Python application
 
 on:
   schedule:
-    # Run at :00 and :30 during the 2–3 AM UTC window (4 runs/day).
-    # Previously used */1,30 which triggered every minute (~120 runs/day).
-    - cron: '0,30 2-3 * * *' #Ref https://crontab.guru/examples.html
+    # Run at :00 and :20 and :40 during the 2–3 AM UTC window (6 runs/day).
+    - cron: '0,20,40 2-4 * * *' #Ref https://crontab.guru/examples.html
 
 permissions:
   contents: write
