@@ -26,10 +26,10 @@ def get_stations(
         {
             "station_code": "MTRL",
             "station_name": "Montréal",
+            "is_corridor": true,
             "avg_delay_minutes": 12.4,
-            "on_time_rate": 0.61,
-            "total_stops": 320,
-            "is_corridor": true
+            "on_time_pct": 61.0,
+            "total_stops": 320
         }
     """
     df = get_df()
@@ -65,10 +65,10 @@ def get_stations(
         result.append({
             "station_code": str(row["station_code"]),
             "station_name": str(row["station_name"]),
-            "avg_delay_minutes": round(float(row["avg_delay_minutes"]), 2),
-            "on_time_rate": round(float(row["on_time_rate"]), 4),
-            "total_stops": int(row["total_stops"]),
             "is_corridor": bool(row["is_corridor"]),
+            "avg_delay_minutes": round(float(row["avg_delay_minutes"]), 2),
+            "on_time_pct": round(float(row["on_time_rate"]) * 100, 1),
+            "total_stops": int(row["total_stops"]),
         })
 
     return result
