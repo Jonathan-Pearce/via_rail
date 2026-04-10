@@ -1,0 +1,88 @@
+/* =========================================================
+   Via Rail Performance Dashboard — Global Styles
+   ========================================================= */
+
+/* --- Color Tokens ---------------------------------------- */
+:root {
+  --via-yellow: #FFD200;
+  --via-yellow-dark: #E6BC00;
+  --via-yellow-light: #FFF8CC;
+  --via-blue: #003DA5;
+  --via-blue-dark: #002d7a;
+  --via-blue-light: #E8EEFF;
+  --via-dark: #1A1A1A;
+  --via-gray-900: #222222;
+  --via-gray-700: #555555;
+  --via-gray-500: #888888;
+  --via-gray-300: #CCCCCC;
+  --via-gray-200: #E8E8E8;
+  --via-gray-100: #F5F5F5;
+  --via-white: #FFFFFF;
+  --via-success: #27AE60;
+  --via-warning: #F39C12;
+  --via-danger: #C0392B;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Typography scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+
+  --font-sans: 'Helvetica Neue', Arial, 'Segoe UI', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --sidebar-width: 280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--via-gray-900);
+  background: var(--via-gray-100);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { height: 100%; display: flex; flex-direction: column; }
+
+a { color: var(--via-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--via-gray-100); }
+::-webkit-scrollbar-thumb { background: var(--via-gray-300); border-radius: var(--radius-pill); }
+::-webkit-scrollbar-thumb:hover { background: var(--via-gray-500); }
+
+:focus-visible { outline: 2px solid var(--via-blue); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+
+.animate-fade-in { animation: fadeIn var(--transition-slow) both; }
