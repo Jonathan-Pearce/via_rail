@@ -1,5 +1,6 @@
 /**
  * Format an ISO date string (YYYY-MM-DD) to a short display label (e.g., "Apr 1").
+ * Uses the Canadian English locale ('en-CA') which matches Via Rail's primary market.
  */
 export function formatShortDate(isoDate: string): string {
   try {

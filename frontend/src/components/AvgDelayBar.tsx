@@ -49,7 +49,7 @@ const AvgDelayBar: React.FC<AvgDelayBarProps> = ({ data, loading, error, onRetry
   return (
     <ChartCard
       title="Average Delay"
-      subtitle="Mean delay in minutes per day (green ≤ 5 min, yellow 6–15 min, red > 15 min)"
+      subtitle="Mean delay in minutes per day (green ≤ 5 min, yellow 6–15 min, orange 16–60 min, red > 60 min)"
       loading={loading}
       error={error}
       onRetry={onRetry}

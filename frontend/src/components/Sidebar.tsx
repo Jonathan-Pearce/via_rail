@@ -21,6 +21,16 @@ const PERIODS: Array<{ value: FilterState['period']; label: string }> = [
   { value: '365d', label: '1 year' },
 ];
 
+/**
+ * Curated list of active Via Rail train numbers.
+ * Update this list when Via Rail adds or retires train numbers.
+ */
+const VIA_TRAIN_NUMBERS: string[] = [
+  '1', '2', '11', '12', '14', '15', '21', '22', '30', '31', '40', '41',
+  '51', '52', '53', '54', '55', '56', '57', '58', '60', '61', '62', '63',
+  '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75',
+].sort();
+
 const FilterIcon: React.FC = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -62,15 +72,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
   }, [open, onClose]);
-
-  // Deduplicate train numbers from stations data — use a separate trains query if available,
-  // but for now build unique list from station names for demo.
-  const trainNumbers = React.useMemo(() => {
-    // We don't have a /api/trains endpoint, so show a curated list of corridor trains
-    return ['1', '2', '11', '12', '14', '15', '21', '22', '30', '31', '40', '41',
-            '51', '52', '53', '54', '55', '56', '57', '58', '60', '61', '62', '63',
-            '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75'].sort();
-  }, []);
 
   const stationOptions = React.useMemo(
     () => [...stations].sort((a, b) => a.station_name.localeCompare(b.station_name)),
@@ -150,7 +151,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 onChange={e => onDraftChange({ trainNumber: e.target.value })}
               >
                 <option value="">All trains</option>
-                {trainNumbers.map(n => (
+                {VIA_TRAIN_NUMBERS.map(n => (
                   <option key={n} value={n}>Train {n}</option>
                 ))}
               </select>

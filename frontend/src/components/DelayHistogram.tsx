@@ -43,7 +43,7 @@ const CustomTooltip: React.FC<{
   const total = payload[0].value;
   return (
     <div className="chart-tooltip">
-      <div className="chart-tooltip__date">{bin.label.replace('\n', ' ')}</div>
+      <div className="chart-tooltip__date">{bin.label.replace(/\n/g, ' ')}</div>
       <div className="chart-tooltip__row">
         <span className="chart-tooltip__dot" style={{ background: bin.color }} />
         <span className="chart-tooltip__label">Days:</span>
