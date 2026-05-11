@@ -1,0 +1,114 @@
+.app-header {
+  background: var(--via-dark);
+  color: var(--via-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  height: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.app-header__menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--via-white);
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  line-height: 0;
+}
+
+.app-header__menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.app-header__logo-mark {
+  color: var(--via-yellow);
+  line-height: 0;
+}
+
+.app-header__title-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.app-header__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--via-yellow);
+}
+
+.app-header__subtitle {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.app-header__tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 100%;
+}
+
+.app-header__tab {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 var(--space-5);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+
+.app-header__tab:hover {
+  color: var(--via-white);
+  text-decoration: none;
+  border-bottom-color: rgba(255, 210, 0, 0.5);
+}
+
+.app-header__tab--active {
+  color: var(--via-yellow);
+  border-bottom-color: var(--via-yellow);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .app-header__menu-btn {
+    display: flex;
+  }
+
+  .app-header__subtitle {
+    display: none;
+  }
+
+  .app-header__inner {
+    padding: 0 var(--space-4);
+  }
+}

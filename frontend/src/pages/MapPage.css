@@ -1,0 +1,33 @@
+.map-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--via-gray-100);
+}
+
+.map-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+  padding: var(--space-12);
+  background: var(--via-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  max-width: 460px;
+  width: 90%;
+}
+
+.map-page__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--via-gray-900);
+}
+
+.map-page__desc {
+  font-size: var(--text-sm);
+  color: var(--via-gray-500);
+  line-height: 1.7;
+}
