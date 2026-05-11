@@ -1,0 +1,88 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Via Rail Performance Dashboard — Design Tokens
+   Aesthetic: Railway-industrial editorial dark; Bebas Neue headlines,
+   DM Sans body, DM Mono data. Via Rail yellow (#FFD200) as the single
+   sharp accent throughout a deep charcoal/navy ground.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Brand colours ─────────────────────────────────────────────────── */
+  --via-yellow:       #FFD200;
+  --via-yellow-dim:   #c8a800;
+  --via-yellow-glow:  rgba(255, 210, 0, 0.15);
+
+  /* ── Surface scale (dark-to-light) ────────────────────────────────── */
+  --surface-0:  #090e15;   /* page background */
+  --surface-1:  #0f1923;   /* card / sidebar */
+  --surface-2:  #172030;   /* raised / hover state */
+  --surface-3:  #1f2d3f;   /* borders / dividers */
+  --surface-4:  #2a3d56;   /* disabled / muted bg */
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-primary:   #f0eeea;
+  --text-secondary: #8fa3b8;
+  --text-muted:     #4d6478;
+  --text-inverse:   #090e15;
+
+  /* ── Status ─────────────────────────────────────────────────────────── */
+  --status-good:    #00c896;  /* on-time */
+  --status-med:     #f59e0b;  /* 6–59 min late */
+  --status-bad:     #ef4444;  /* 60+ min late */
+  --status-unknown: #4d6478;  /* no data */
+
+  --status-good-bg: rgba(0, 200, 150, 0.12);
+  --status-med-bg:  rgba(245, 158, 11, 0.12);
+  --status-bad-bg:  rgba(239, 68, 68, 0.12);
+
+  /* ── Typography ─────────────────────────────────────────────────────── */
+  --font-display: 'Bebas Neue', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', ui-monospace, monospace;
+
+  --text-xs:   0.6875rem;   /* 11px */
+  --text-sm:   0.8125rem;   /* 13px */
+  --text-base: 0.9375rem;   /* 15px */
+  --text-lg:   1.0625rem;   /* 17px */
+  --text-xl:   1.25rem;     /* 20px */
+  --text-2xl:  1.625rem;    /* 26px */
+  --text-3xl:  2.25rem;     /* 36px */
+  --text-4xl:  3rem;        /* 48px */
+
+  /* ── Spacing (8-pt grid) ─────────────────────────────────────────── */
+  --sp-1:  0.25rem;   /* 4px  */
+  --sp-2:  0.5rem;    /* 8px  */
+  --sp-3:  0.75rem;   /* 12px */
+  --sp-4:  1rem;      /* 16px */
+  --sp-5:  1.25rem;   /* 20px */
+  --sp-6:  1.5rem;    /* 24px */
+  --sp-8:  2rem;      /* 32px */
+  --sp-10: 2.5rem;    /* 40px */
+  --sp-12: 3rem;      /* 48px */
+  --sp-16: 4rem;      /* 64px */
+
+  /* ── Radii ────────────────────────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  20px;
+  --radius-pill: 9999px;
+
+  /* ── Elevation ───────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.50), 0 2px 4px rgba(0,0,0,0.30);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.55), 0 4px 8px rgba(0,0,0,0.30);
+  --shadow-yellow: 0 0 0 1px var(--via-yellow), 0 4px 20px rgba(255,210,0,0.25);
+
+  /* ── Motion ──────────────────────────────────────────────────────── */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-base:   220ms;
+  --dur-slow:   400ms;
+
+  /* ── Layout ──────────────────────────────────────────────────────── */
+  --sidebar-width: 280px;
+  --topnav-height: 60px;
+  --content-max: 1320px;
+}
